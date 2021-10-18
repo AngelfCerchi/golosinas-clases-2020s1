@@ -139,7 +139,7 @@ class Chocolatin inherits Golosina{
 }
 
 class ChocolatinVIP inherits Chocolatin{
-	method humedad() = 0.randomUpTo(1)
+	method humedad() = 0.2
 	override method peso() = super() * (1 + self.humedad())
 	
 }

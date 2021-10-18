@@ -5,6 +5,15 @@ object mariano {
 	 
 	method comprar(_golosina) { golosinas.add(_golosina) }
 	
+	method comprarVarios(listaGolosinas) { golosinas.addAll(listaGolosinas) }
+	
+	method baniar(golosina){ 
+		if (!golosinas.contains(golosina) and !golosina.estaBaniada()){
+			self.comprar( new GolosinaBaniada(golosinaInterior = golosina))
+		}
+		
+	}
+	
 	method desechar (_golosina) { golosinas.remove(_golosina) }
 	
 	method golosinas() { return golosinas }
